@@ -1,0 +1,13 @@
+sources:
+  - name: MyCard
+    handler:
+      graphql:
+        endpoint: "{env.APP_BACKEND_URL}"
+        operationHeaders:
+          Authorization: "{context.headers.authorization}"
+  - name: KycRamaeraBackend
+    handler:
+      graphql:
+        endpoint: "{env.KYC_BACKEND_URL}"
+        operationHeaders:
+          Authorization: "{context.headers.authorization}"
